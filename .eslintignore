@@ -1,0 +1,4 @@
+public/ts/*.ts
+*.less
+*.css
+*.scss
