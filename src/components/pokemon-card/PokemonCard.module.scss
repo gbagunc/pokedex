@@ -1,0 +1,16 @@
+@import url('/src/styles/_pallete.scss');
+
+.cardWrapper {
+    .cardImage {
+        padding: 20px;
+        background: var(--cardBackground);
+        border-radius: 8px;
+        img {
+            width: 100%;
+        }
+    }
+    .title {
+        text-transform: capitalize;
+        font-size: 1.3rem;
+    }
+}

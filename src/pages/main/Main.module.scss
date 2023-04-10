@@ -1,0 +1,26 @@
+@import url('/src/styles/_pallete.scss');
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    .inputContainer {
+        padding: 20px;
+    }
+    .pagination {
+        padding: 50px;
+        background: var(--paginationBackground);
+        width: 100%;
+        :global .ant-pagination .ant-pagination-item-active  {
+            background-color: var(--paginationSecond);
+            border-color: var(--paginationBackground);
+        }
+    }
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--title);
+    }
+}

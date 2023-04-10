@@ -1,0 +1,21 @@
+.modalDialog {
+    :global .ant-modal-content {
+        background: var(--modalBackground);
+    }
+    .modalContent {
+        padding: 15px;
+        background: var(--modalSecond);
+        border-radius: 8px;
+        .skillValue,
+        .skillName {
+            width: 100%;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--skill);
+        }
+        .skillValue {
+            color: var(--skill);
+        }
+    }
+}
