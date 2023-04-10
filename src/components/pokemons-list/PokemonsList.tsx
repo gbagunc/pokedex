@@ -9,13 +9,18 @@ import styles from './PokemonList.module.scss';
 
 const PokemonsList = ({ pokemonsData, onOpenModal }: IPokemonsListProps) => {
   return (
-    <Row className={styles.pokemonsContainer} gutter={[0, 40]}>
-      {!pokemonsData && <Spin indicator={<LoadingOutlined className={styles.loadingIcon} />} />}
-
-      {pokemonsData?.map(({ id, name }) => {
-        return <PokemonCard key={id} id={id} name={name} handleOpenPokemonCard={onOpenModal} />;
-      })}
-    </Row>
+    <>
+      {!pokemonsData ? (
+        <Spin indicator={<LoadingOutlined className={styles.loadingIcon} />} />
+      ) : (
+        <Row className={styles.pokemonsContainer} gutter={[0, 40]}>
+          {pokemonsData &&
+            pokemonsData?.map(({ id, name }) => {
+              return <PokemonCard key={id} id={id} name={name} handleOpenPokemonCard={onOpenModal} />;
+            })}
+        </Row>
+      )}
+    </>
   );
 };
 
